@@ -1,0 +1,14 @@
+i2c:
+  sda: ${sda}
+  scl: ${scl}
+  scan: True
+
+paj7620u2:
+  up:
+    name: "Gesture UP"
+  down:
+    name: "Gesture DOWN"
+  left:
+    name: "Gesture LEFT"
+  right:
+    name: "Gesture RIGHT"

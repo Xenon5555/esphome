@@ -1,0 +1,59 @@
+uart:
+  - id: uart_c1001
+    tx_pin: ${tx_pin}
+    rx_pin: ${rx_pin}
+    baud_rate: 115200
+
+dfrobot_c1001:
+  - id: test1
+    operation_mode: 1 # 1=Fall mode, 2=Sleep mode
+    ignore_unknown_reply: True
+    system_function:
+      hardware_version:
+        name: "DFRobot C1001 Hardware Version"
+      firmware_version:
+        name: "DFRobot C1001 Firmware Version"
+      hp_led:
+        name: "DFRobot C1001 Human Presence LED"
+      fall_led:
+        name: "DFRobot C1001 Fall Detection LED"
+      module_restart:
+        name: "DFRobot C1001 Module Restart"
+    human_existence:
+      human_presence:
+        name: "DFRobot C1001 Human Presence"
+      motion_information:
+        name: "DFRobot C1001 Motion Information"
+
+  - id: test2
+    uart_id: uart_c1001
+    operation_mode: 2 # 1=Fall mode, 2=Sleep mode
+    system_function:
+      hardware_version:
+        name: "DFRobot C1001 Hardware Version"
+      firmware_version:
+        name: "DFRobot C1001 Firmware Version"
+      hp_led:
+        name: "DFRobot C1001 Human Presence LED"
+      module_restart:
+        name: "DFRobot C1001 Module Restart"
+    human_existence:
+      human_presence:
+        name: "DFRobot C1001 Human Presence"
+      motion_information:
+        name: "DFRobot C1001 Motion Information"
+      human_position_x:
+        name: "DFRobot C1001 Human Position X"
+      human_position_y:
+        name: "DFRobot C1001 Human Position Y"
+      human_position_z:
+        name: "DFRobot C1001 Human Position Z"
+    sleep_monitoring:
+      bed_entry_status:
+        name: "DFRobot C1001 Bed Entry Status"
+      sleep_state:
+        name: "DFRobot C1001 Sleep State"
+      heart_rate:
+        name: "DFRobot C1001 Heart Rate"
+      respiration_rate:
+        name: "DFRobot C1001 Respiration Rate"

@@ -1,0 +1,5 @@
+substitutions:
+  sda: GPIO04
+  scl: GPIO05
+
+<<: !include common.yaml
